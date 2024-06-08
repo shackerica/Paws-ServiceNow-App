@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="ad6d366f97620210af13f6fce053af83" label="Dogs" max_length="40" name="x_1108343_paws_dogs" type="collection">
+        <element label="Age" max_length="40" name="age" type="integer"/>
+        <element label="Bio" max_length="4000" name="bio" type="string"/>
+        <element choice="1" label="Breed" max_length="40" name="breed" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="German Shepherd" sequence="0" value="german_shepherd"/>
+                <element inactive_on_update="false" label="Rottweiler" sequence="1" value="rottweiler"/>
+                <element inactive_on_update="false" label="Mix" sequence="2" value="mix"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" label="Name" max_length="100" name="name" type="string"/>
+        <element label="Neutered" max_length="40" name="neutered" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Picture" max_length="40" name="picture" type="user_image"/>
+        <element label="Shots" max_length="40" name="shots" type="boolean"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Adopted" sequence="1" value="adopted"/>
+                <element inactive_on_update="false" label="Pending" sequence="2" value="pending"/>
+            </choice>
+        </element>
     </element>
 </database>
