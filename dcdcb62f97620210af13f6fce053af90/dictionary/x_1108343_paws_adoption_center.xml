@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b028a72f97260210af13f6fce053af5d" label="Adoption Center" max_length="40" name="x_1108343_paws_adoption_center" type="collection">
+        <element label="Email" max_length="100" name="email" type="string"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Phone" max_length="40" name="phone" type="phone_number_e164"/>
+    </element>
+</database>
