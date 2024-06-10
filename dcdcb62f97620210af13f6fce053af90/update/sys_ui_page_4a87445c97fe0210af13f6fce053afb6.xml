@@ -3,29 +3,28 @@
         <category>general</category>
         <client_script><![CDATA[// When the element with id 'addDog' is clicked
 jQuery('#addDog').click(function() {
-  // Create a new instance of GlideAjax to handle the AJAX request
-  var ga = new GlideAjax('fetchUtils');
-  
-  // Add the parameters for the AJAX request
-  ga.addParam('sysparam_name', 'createDog'); // Specify the operation name
-  ga.addParam('sysparam_dog_name', jQuery('#dogName').val()); // Add dog name from the input field
-  ga.addParam('sysparam_dog_age', jQuery('#dogAge').val()); // Add dog age from the input field
-  ga.addParam('sysparam_dog_neutered', jQuery('#dogNeutered').is(':checked')); // Add neutered status from the checkbox
-  ga.addParam('sysparam_dog_shots', jQuery('#dogShots').is(':checked')); // Add shots status from the checkbox
-  
-  // Send the AJAX request and specify the callback function to handle the response
-  ga.getXML(fetchCallback);
+    // Create a new instance of GlideAjax to handle the AJAX request
+    var ga = new GlideAjax('fetchUtils');
+
+    // Add the parameters for the AJAX request
+    ga.addParam('sysparm_name', 'createDog'); // Specify the operation name
+    ga.addParam('sysparm_dog_name', jQuery('#dogName').val()); // Add dog name from the input field
+    ga.addParam('sysparm_dog_age', jQuery('#dogAge').val()); // Add dog age from the input field
+    ga.addParam('sysparm_dog_neutered', jQuery('#dogNeutered').is(':checked')); // Add neutered status from the checkbox
+    ga.addParam('sysparm_dog_shots', jQuery('#dogShots').is(':checked')); // Add shots status from the checkbox
+
+    // Send the AJAX request and specify the callback function to handle the response
+    ga.getXML(fetchCallback);
 });
 
 // Function to handle the AJAX response
 function fetchCallback(response) {
-  // Get the 'answer' attribute from the response XML and split it by '|'
-  var answer = response.responseXML.documentElement.getAttribute('answer').split('|');
-  
-  // Append a message to the element with id 'msg' with details of the created dog
-  jQuery('#msg').append('<p>' + answer[0] + ' has successfully been created. Dog ID: ' + answer[1] + '</p><br/><a href="'+ answer[2] + '"> View new dog</a>');
-}
-]]></client_script>
+    // Get the 'answer' attribute from the response XML and split it by '|'
+    var answer = response.responseXML.documentElement.getAttribute('answer').split('|');
+
+    // Append a message to the element with id 'msg' with details of the created dog
+    jQuery('#msg').append('<p>' + answer[0] + ' has successfully been created. Dog ID: ' + answer[1] + '</p><br/><a href="' + answer[2] + '"> View new dog</a>');
+}]]></client_script>
         <description/>
         <direct>false</direct>
         <endpoint>x_1108343_paws_Create Dog.do</endpoint>
@@ -77,13 +76,13 @@ function fetchCallback(response) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-10 16:58:27</sys_created_on>
         <sys_id>4a87445c97fe0210af13f6fce053afb6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Create Dog</sys_name>
         <sys_package display_value="Paws" source="x_1108343_paws">dcdcb62f97620210af13f6fce053af90</sys_package>
         <sys_policy/>
         <sys_scope display_value="Paws">dcdcb62f97620210af13f6fce053af90</sys_scope>
         <sys_update_name>sys_ui_page_4a87445c97fe0210af13f6fce053afb6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-10 17:28:11</sys_updated_on>
+        <sys_updated_on>2024-06-10 18:56:09</sys_updated_on>
     </sys_ui_page>
 </record_update>

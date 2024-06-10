@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1108343_paws.fetchUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>fetchUtils</name>
+        <script><![CDATA[var fetchUtils = Class.create();
+fetchUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    createDog: function() {
+        var dogName = this.getParameter('sysparm_dog_name');
+        var dogAge = this.getParameter('sysparm_dog_age');
+        var dogShots = this.getParameter('sysparm_dog_shots') === 'true';
+        var dogNeutered = this.getParameter('sysparm_dog_neutered') === 'true';
+
+        // insert dog
+        var newDog = new GlideRecord('x_1108343_paws_dogs');
+        newDog.newRecord();
+        newDog.name = dogName;
+        newDog.age = dogAge;
+        if (dogShots) {
+            newDog.shots = true;
+        }
+        if (dogNeutered) {
+            newDog.neutered = true;
+        }
+
+        var sysID = newDog.insert();
+        var dogNumber = newDog.number.getDisplayValue();
+        var dogLink = newDog.getLink();
+
+        // return values
+        return dogName + '|' + dogNumber + '|' + dogLink;
+    },
+
+    type: 'fetchUtils'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-10 17:44:04</sys_created_on>
+        <sys_id>7595145c97324210af13f6fce053af0e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>fetchUtils</sys_name>
+        <sys_package display_value="Paws" source="x_1108343_paws">dcdcb62f97620210af13f6fce053af90</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Paws">dcdcb62f97620210af13f6fce053af90</sys_scope>
+        <sys_update_name>sys_script_include_7595145c97324210af13f6fce053af0e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-10 19:24:48</sys_updated_on>
+    </sys_script_include>
+</record_update>
