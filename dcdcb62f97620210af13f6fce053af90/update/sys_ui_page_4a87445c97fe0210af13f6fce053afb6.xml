@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_1108343_paws_Create Dog.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide">
+
+  <h1>Add a new dog</h1>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="dogName" class="col-sm-2 control-label">Name of dog:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="dogName" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dogAge" class="col-sm-2 control-label">Age of dog:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="dogAge" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label>
+            <input id="dogShots" type="checkbox" /> Shots
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label>
+            <input id="dogNeutered" type="checkbox" /> Neutered
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <button id="addDog" class="btn btn-default">Add </button>
+  <div id="msg"> </div>
+
+
+</j:jelly>]]></html>
+        <name>Create Dog</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-10 16:58:27</sys_created_on>
+        <sys_id>4a87445c97fe0210af13f6fce053afb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Dog</sys_name>
+        <sys_package display_value="Paws" source="x_1108343_paws">dcdcb62f97620210af13f6fce053af90</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Paws">dcdcb62f97620210af13f6fce053af90</sys_scope>
+        <sys_update_name>sys_ui_page_4a87445c97fe0210af13f6fce053afb6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-10 16:58:27</sys_updated_on>
+    </sys_ui_page>
+</record_update>
