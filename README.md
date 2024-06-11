@@ -13,9 +13,14 @@ Paws is an application developed in ServiceNow Studio to facilitate dog adoption
 #### Tables:
 1. **Dogs (x_1108343_paws_dogs)**
    - This table stores information about dogs available for adoption.
+   
+     <img width="1185" alt="Screenshot 2024-06-10 at 10 15 13 PM" src="https://github.com/shackerica/Paws-ServiceNow-App/assets/19885127/5972b083-f27e-4956-a9a2-49fbbabc9752">
 
 2. **Adoption Centers (x_1108343_paws_adoption_center)**
-   - This table contains data about adoption centers where dogs are housed.
+   - This table contains data about adoption centers where dogs are housed. <br>
+   
+     <img width="1194" alt="Screenshot 2024-06-10 at 10 15 59 PM" src="https://github.com/shackerica/Paws-ServiceNow-App/assets/19885127/c2eca32e-7435-4f19-b138-93d5e25bc9da">
+
 
 #### UI Page:
 - **Create Dog**
